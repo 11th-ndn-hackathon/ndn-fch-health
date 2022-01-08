@@ -5,7 +5,7 @@ export class Request {
     const { transport, family, router, names } = j;
     if (!(
       typeof transport === "string" &&
-      typeof family === "number" && [4, 6].includes(family) &&
+      (family === 4 || family === 6) &&
       typeof router === "string" &&
       Array.isArray(names) && names.every((name) => typeof name === "string")
     )) {
@@ -22,7 +22,7 @@ export class Request {
      * Address family.
      * @type {4 | 6}
      */
-    this.family = (/** @type {any} */ family);
+    this.family = family;
 
     /**
      * Router string.
