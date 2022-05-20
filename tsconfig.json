@@ -2,10 +2,10 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "checkJs": true,
-    "module": "esnext",
+    "module": "ES2022",
     "moduleResolution": "node",
     "noEmit": true,
-    "target": "ESNext",
+    "target": "ES2022",
     "types": [
       "node"
     ]
