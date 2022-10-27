@@ -6,8 +6,7 @@ import { WsTransport } from "@ndn/ws-transport";
 import hirestime from "hirestime";
 import WebSocket from "ws";
 
-/** @type {import("hirestime").Elapsor} */
-const getNow = (/** @type {any} */(/** @type {unknown} */ hirestime)).default();
+const getNow = hirestime();
 
 /** @typedef {{ ok: boolean; rtt?: number; error?: string; }} ProbeResult */
 
@@ -25,6 +24,7 @@ export class Probe {
         mustBeFresh: true,
         hopLimit: 64,
       },
+      retx: 1,
     });
   }
 
@@ -95,7 +95,7 @@ export class UdpProbe extends Probe {
   }
 }
 
-/** WebSockets transport probe. */
+/** WebSocket transport probe. */
 export class WsProbe extends Probe {
   /** @override */
   async openFace() {
