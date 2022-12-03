@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:19-alpine
 WORKDIR /app
 COPY package.json .npmrc ./
 RUN ["corepack", "pnpm", "install", "--prod"]

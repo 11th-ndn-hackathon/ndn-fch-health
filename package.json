@@ -7,28 +7,28 @@
     "start": "nodemon -w src server.cjs",
     "typecheck": "tsc"
   },
-  "packageManager": "pnpm@7.14.0",
+  "packageManager": "pnpm@7.17.1",
   "dependencies": {
     "@ndn/endpoint": "https://ndnts-nightly.ndn.today/endpoint.tgz",
     "@ndn/fw": "https://ndnts-nightly.ndn.today/fw.tgz",
     "@ndn/node-transport": "https://ndnts-nightly.ndn.today/node-transport.tgz",
     "@ndn/packet": "https://ndnts-nightly.ndn.today/packet.tgz",
     "@ndn/ws-transport": "https://ndnts-nightly.ndn.today/ws-transport.tgz",
-    "hirestime": "^7.0.1",
+    "hirestime": "^7.0.3",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "nodemon": "^2.0.20",
-    "ws": "^8.10.0"
+    "ws": "^8.11.0"
   },
   "devDependencies": {
     "@types/koa": "^2.13.5",
-    "@types/koa-bodyparser": "^4.3.8",
-    "@types/node": "^18.11.7",
+    "@types/koa-bodyparser": "^4.3.10",
+    "@types/node": "^18.11.10",
     "@types/ws": "^8.5.3",
-    "@yoursunny/xo-config": "^0.52.0",
-    "typescript": "~4.8.4"
+    "@yoursunny/xo-config": "^0.52.1",
+    "typescript": "~4.9.3"
   },
   "engines": {
-    "node": "^18.10.0"
+    "node": "^18.10.0 || ^19.0.0"
   }
 }
