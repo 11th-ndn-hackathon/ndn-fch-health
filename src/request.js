@@ -34,6 +34,6 @@ export class Request {
      * Destination names.
      * @type {Name[]}
      */
-    this.names = names.map((name) => new Name(name));
+    this.names = Array.from(names, (name) => new Name(name));
   }
 }
