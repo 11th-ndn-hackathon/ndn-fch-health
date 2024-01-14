@@ -7,7 +7,7 @@
     "start": "nodemon -w src src/main.js",
     "typecheck": "tsc"
   },
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.14.1",
   "dependencies": {
     "@ndn/endpoint": "https://ndnts-nightly.ndn.today/endpoint.tgz",
     "@ndn/fw": "https://ndnts-nightly.ndn.today/fw.tgz",
@@ -15,20 +15,20 @@
     "@ndn/packet": "https://ndnts-nightly.ndn.today/packet.tgz",
     "@ndn/ws-transport": "https://ndnts-nightly.ndn.today/ws-transport.tgz",
     "hirestime": "^7.0.3",
-    "koa": "^2.14.2",
+    "koa": "^2.15.0",
     "koa-bodyparser": "^4.4.1",
-    "nodemon": "^3.0.1",
-    "ws": "^8.13.0"
+    "nodemon": "^3.0.2",
+    "ws": "^8.16.0"
   },
   "devDependencies": {
-    "@types/koa": "^2.13.8",
-    "@types/koa-bodyparser": "^4.3.10",
-    "@types/node": "^20.5.0",
-    "@types/ws": "^8.5.5",
-    "@yoursunny/xo-config": "0.55.0",
-    "typescript": "~5.1.6"
+    "@types/koa": "^2.14.0",
+    "@types/koa-bodyparser": "^4.3.12",
+    "@types/node": "^20.11.0",
+    "@types/ws": "^8.5.10",
+    "@yoursunny/xo-config": "0.56.1",
+    "typescript": "~5.3.3"
   },
   "engines": {
-    "node": "^20.2.0"
+    "node": "^20.11.0"
   }
 }
