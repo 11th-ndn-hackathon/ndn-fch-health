@@ -1,4 +1,4 @@
-import { Endpoint } from "@ndn/endpoint";
+import { consume } from "@ndn/endpoint";
 import { Forwarder } from "@ndn/fw";
 import { splitHostPort, UdpTransport } from "@ndn/node-transport";
 import { Name } from "@ndn/packet";
@@ -18,14 +18,15 @@ export class Probe {
   constructor(request) {
     this.request = request;
     this.fw = Forwarder.create();
-    this.endpoint = new Endpoint({
+    /** @type {import("@ndn/endpoint").ConsumerOptions} */
+    this.cOpts = {
       fw: this.fw,
       modifyInterest: {
         mustBeFresh: true,
         hopLimit: 64,
       },
       retx: 1,
-    });
+    };
   }
 
   /**
@@ -58,7 +59,7 @@ export class Probe {
   async probeName(name) {
     try {
       const t0 = getNow();
-      await this.endpoint.consume(name);
+      await consume(name, this.cOpts);
       const t1 = getNow();
       return {
         ok: true,
