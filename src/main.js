@@ -28,7 +28,7 @@ app.use(bodyParser({ enableTypes: ["json"] }))
       probe = new Probe(request);
     } catch (err) {
       ctx.status = 400;
-      ctx.body = `${err}`;
+      ctx.body = err.message ?? `${err}`;
       return;
     }
 

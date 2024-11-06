@@ -40,7 +40,7 @@ export class Probe {
     try {
       this.face = await this.openFace();
     } catch (err) {
-      result.connectError = `${err}`;
+      result.connectError = err.message ?? `${err}`;
       return result;
     }
     result.connected = true;
